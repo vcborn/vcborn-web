@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head id="head">
+  <!-- ページの内容 -->
+  <title>VCLinux | VCborn</title>
+  <meta name="description" content="The best Linux for you." />
+
+  <!-- OGPタグ用 -->
+  <meta property="og:url" content="https://vcborn.com/en/services/vclinux/" />
+  <meta property="og:title" content="VCLinux | VCborn" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="The best Linux for you." />
+  <meta property="og:image" content="https://vcborn.com/images/jpg/vclinuxdesk.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@vcborn_support" />
+  <meta property="og:site_name" content="VCborn" />
+  <meta property="og:locale" content="en_US" />
+  <meta charset="utf-8" />
+
+  <!-- GooogleAdsense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1336300432888389"
+    crossorigin="anonymous"></script>
+
+  <!-- GoogleAnalytics-->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8GC99E31DE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-8GC99E31DE");
+  </script>
+  <style>
+    #product section h2 {
+      margin-bottom: 2rem;
+    }
+
+    #product section {
+      min-height: 10rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header"></header>
+  <section id="hero">
+    <picture>
+      <source srcset="/images/webp/vclinux_front.webp" type="image/webp" />
+      <img src="/images/jpg/vclinux_front.jpg" alt="VCLinux Image" />
+    </picture>
+    <div class="contents left">
+      <img src="/images/vclinux-logo.svg" alt="VCLinux ロゴ" />
+      <p>The best Linux for you.</p>
+      <a href="#download">
+        Download
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+  </section>
+  <main id="product">
+    <section id="about">
+      <div class="contents">
+        <h2>What's VCLinux?</h2>
+        <p>
+          VCLinux is custom Linux that is developing by VCborn.
+          <br />
+          It's based on KDEneon and has been customized to make it easier for Japanese people to use.
+          <br />
+          You can use Windows software (such as AviUtl). (This is not included in Beta1)
+          <br />
+          BBeta1 is not equipped with Onlyoffice. Instead, it uses LibreOffice Brave, which has been translated into
+          Japanese.
+        </p>
+      </div>
+    </section>
+    <section class="blue" id="features">
+      <div class="contents">
+        <h2>Features</h2>
+        <div class="split">
+          <div class="feature">
+            <i class="fab fa-windows"></i>
+            <h3>Support windows software</h3>
+            <p>
+              You can use Windows software without garbled characters using Wine. (Incomplete in Beta1).
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-globe"></i>
+            <h3>New Experience Browsing</h3>
+            <p>Uses its own browser.
+              <!--後で書き足し-->
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-terminal"></i>
+            <h3>More comfortable programming</h3>
+            <p>VCLinux uses VSCode as its text editor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="notes">
+      <div class="contents">
+        <h2>Important notes</h2>
+        <ul>
+          <li>It's very unstable.</li>
+          <li>
+            Please
+            <b>enable auto-login during installation</b>
+            as sddm does not work properly.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="blue" id="download">
+      <div class="contents">
+        <h2>Download</h2>
+        <form name="selver" class="version">
+          <select name="version" onchange="genUrl();">
+            <option value="select">Select version...</option>
+            <option value="beta1">Beta1</option>
+          </select>
+          <select name="mirror" onchange="genUrl();">
+            <option value="select">Select mirror...</option>
+            <option value="colorfulbox">ColorfulBox（main）</option>
+            <option value="gdrive">Google Drive</option>
+            <option value="onedrive">OneDrive</option>
+            <option value="yoshis">yoshis.jp</option>
+            <option value="cyberrex">cyberrex.jp</option>
+          </select>
+          <div class="agreement">
+            <input type="checkbox" id="agree" onchange="genUrl();" />
+            <label for="agree">
+              I have read and agree with
+              <a href="/tos.html">Terms of Service</a>
+            </label>
+          </div>
+        </form>
+        <a class="button disabled" href="#" id="dllink">
+          Download
+          <i class="fas fa-download"></i>
+        </a>
+      </div>
+    </section>
+    <section id="requirements">
+      <div class="contents">
+        <h2>Minimum Requirements</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>CPU</td>
+              <td>Core 2 Duo or higher</td>
+            </tr>
+            <tr>
+              <td>RAM</td>
+              <td>1GB(Recommended 2GB or higher)</td>
+            </tr>
+            <tr>
+              <td>DISK</td>
+              <td>25GB or higher</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="blue" id="support">
+      <div class="contents">
+        <h2>Support</h2>
+        <p>
+          If you want to see installation guide, please see
+          <a href="/support/vclinux/how-to-install.html">here</a>.
+          <br />
+          There is any problem or bug, contact from
+          <a href="/contact/">Contact Us page</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer id="footer"></footer>
+  <script src="/js/script.js"></script>
+  <script src="/en/include.js"></script>
+  <!-- 共通化用 -->
+  <script>
+    function genUrl() {
+      const download = document.getElementById("dllink");
+      const agree = document.getElementById("agree");
+      const version = document.selver.version;
+      const versionValue = version.options[version.selectedIndex].value;
+      const mirror = document.selver.mirror;
+      const mirrorValue = mirror.options[mirror.selectedIndex].value;
+      const url = {
+        beta1: {
+          colorfulbox: "https://vcborn.com/files/VCLinux/vclinux-beta1.zip",
+          gdrive:
+            "https://drive.google.com/file/d/1dFKyLVs6vmHUYpFZ6eno8Ga1hN3T5_hi/view?usp=sharing",
+          onedrive:
+            "https://pb82-my.sharepoint.com/personal/guriko2872_t_5tb_in/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fguriko2872%5Ft%5F5tb%5Fin%2FDocuments%2Fvclinux%2Fvclinux%2Dbeta1%2Ezip&parent=%2Fpersonal%2Fguriko2872%5Ft%5F5tb%5Fin%2FDocuments%2Fvclinux&originalPath=aHR0cHM6Ly9wYjgyLW15LnNoYXJlcG9pbnQuY29tLzp1Oi9nL3BlcnNvbmFsL2d1cmlrbzI4NzJfdF81dGJfaW4vRVZFNVJZMzJsZkJIdk1PQUEtdmE0NEFCSzdNUU5FZ2RFY3R2bElWcUx1UWlvUT9ydGltZT0tSkxaSU9DRDJVZw",
+          yoshis: "https://mirror.yoshis.jp/vclinux/vclinux-beta1.zip",
+          cyberrex:
+            "https://mirror.cyberrex.jp/vclinux/beta1/VCLinux-beta1.iso",
+        },
+      };
+
+      if (
+        versionValue == "select" ||
+        mirrorValue == "select" ||
+        !agree.checked
+      ) {
+        download.classList.add("disabled");
+        download.setAttribute("href", "#");
+      } else {
+        if (download.classList.contains("disabled")) {
+          download.classList.remove("disabled");
+        }
+        download.setAttribute("href", url[versionValue][mirrorValue]);
+      }
+    }
+  </script>
+</body>
+
+</html>

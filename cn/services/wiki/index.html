@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head id="head">
+  <!-- ページの内容 -->
+  <title>Wiki | VCborn</title>
+  <meta name="description" content="介绍 VCborn Wiki" />
+  <!-- OGPタグ用 -->
+  <meta property="og:url" content="https://vcborn.com/cn/services/wiki/" />
+  <meta property="og:title" content="Wiki | VCborn" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="介绍 VCborn Wiki" />
+  <meta property="og:image" content="https://vcborn.com/images/jpg/ogp.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@vcborn_support" />
+  <meta property="og:site_name" content="VCborn" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta charset="utf-8" />
+  <!-- GooogleAdsense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1336300432888389"
+    crossorigin="anonymous"></script>
+
+  <!-- GoogleAnalytics-->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8GC99E31DE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-8GC99E31DE");
+  </script>
+  <style>
+    #hero {
+      height: 100vh;
+    }
+
+    #hero .contents {
+      min-width: 300px;
+      animation: fadein 1.5s ease 0s 1 normal;
+      -webkit-animation: fadein 1.5s ease 0s 1 normal;
+    }
+
+    #hero .contents h2 {
+      font-size: 2.5rem;
+    }
+
+    #hero .contents h2,
+    #hero .contents p {
+      color: white;
+    }
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+
+    @-webkit-keyframes fadein {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header"></header>
+  <style>
+    #product {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      max-width: 72rem;
+    }
+
+    #product div {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    #product div.flex {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    #product div.flex i {
+      margin-right: 2rem;
+    }
+
+    #product div h3 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    #product div i {
+      padding: 2rem;
+      border-radius: 9999px;
+      background-color: #163469;
+      color: white;
+    }
+
+    @media (max-width: 770px) {
+      #product div.flex {
+        flex-direction: column;
+      }
+
+      #product div.flex i {
+        margin: 0;
+      }
+    }
+  </style>
+  <section id="hero">
+    <picture>
+      <source srcset="/images/webp/growi.webp" type="image/webp" />
+      <img src="/images/jpg/growi.jpg" alt="Wiki Sample Image" />
+    </picture>
+    <div class="contents center">
+      <h2>VCborn Wiki</h2>
+      <p>一个为VCborn拥有的维基，由VCborn设计，为VCborn设计。</p>
+      <a href="#about">
+        了解更多
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+  </section>
+  <main id="product">
+    <div class="left flex" id="about">
+      <i class="fa-solid fa-circle-question fa-4x"></i>
+      <div class="contents">
+        <h3>为什么是wiki？</h3>
+        <p>VCborn Wiki的创建是为了更容易地在VCborn内部分享文件，并跟踪每个软件的进展。</p>
+      </div>
+    </div>
+    <div class="left flex">
+      <i class="fa-solid fa-envelope fa-4x"></i>
+      <div class="contents">
+        <h3>使用申请</h3>
+        <p>请在本网站联系我们的表格中选择 "申请VCborn Wiki"。</p>
+        <a class="button" href="/contact/">现在申请使用</a>
+      </div>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+</body>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.33.3/tsparticles.slim.min.js"></script>-->
+<script src="/js/script.js"></script>
+<script src="/cn/include.js"></script>
+<!-- 共通化用 -->
+
+</html>

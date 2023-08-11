@@ -1,0 +1,170 @@
+header h1, header h2, header h3, header h4, header div, header ul, header li, header a, header th, header td, header input, main h1, main h2, main h3, main h4, main div, main ul, main li, main a, main th, main td, main input {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 100;
+}
+
+body {
+  margin: 0;
+}
+body header {
+  width: 100%;
+  height: 60px;
+  margin-top: 30px;
+}
+body header #header-inner {
+  width: 1000px;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body header #header-inner h1 {
+  line-height: 60px;
+  margin: 0;
+  color: white;
+}
+body header #header-inner ul {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+body header #header-inner ul li {
+  list-style: none;
+  margin: auto 10px;
+  color: white;
+}
+body header #header-inner ul li a {
+  color: white;
+  text-decoration: none;
+}
+body header #header-inner ul li a:hover {
+  opacity: 0.7;
+}
+body main #hero-header {
+  background-image: url(https://assets.media-platform.com/bi/dist/images/2021/03/19/black-w640.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 700px;
+  margin-top: -90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main #hero-header #hero-header-inner .top-h2 {
+  color: white;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 50px;
+}
+body main #hero-header #hero-header-inner .top-h2 span {
+  font-size: 20px;
+}
+body main .normal-h2 {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  letter-spacing: 4px;
+}
+body main .normal-h2 span {
+  font-size: 18px;
+}
+body main .word-btn {
+  width: 100%;
+  margin: 0 auto;
+}
+body main .word-btn .btn-word {
+  text-align: center;
+}
+body main .word-btn .btn {
+  text-align: center;
+}
+body main .word-btn .btn input {
+  border: none;
+  padding: 5px 30px;
+  margin-top: 10px;
+}
+body main .word-btn .btn input:hover {
+  opacity: 0.8;
+}
+body main #welcome {
+  -webkit-clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 100%);
+  margin-top: -100px;
+  background-image: url(https://pocopota.github.io/icon/square.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 140px;
+}
+body main #welcome #introduction {
+  text-align: center;
+}
+body main #feature {
+  -webkit-clip-path: polygon(0 0, 100% 100px, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 100px, 100% 100%, 0 100%);
+  background-color: white;
+  margin-top: -100px;
+  padding: 140px;
+}
+body main #feature #feature-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 900px;
+  margin: 0 auto;
+}
+body main #feature #feature-inner .feature-item {
+  margin: 0 40px;
+}
+body main #feature #feature-inner .feature-item img {
+  border-radius: 50%;
+  width: 180px;
+}
+body main #feature #feature-inner .feature-item h3 {
+  width: 100%;
+  text-align: center;
+}
+body main #feature #feature-inner .feature-item .feature-detail {
+  width: 100%;
+  text-align: center;
+}
+body main #download {
+  -webkit-clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 100%);
+  margin-top: -100px;
+  background-image: url(https://pocopota.github.io/icon/square.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 140px;
+}
+body main #systemReq {
+  -webkit-clip-path: polygon(0 0, 100% 100px, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 100px, 100% 100%, 0 100%);
+  background-color: white;
+  margin-top: -100px;
+  padding: 140px;
+}
+body main #systemReq #systemReq-detail table {
+  margin: 0 auto;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+body main #systemReq #systemReq-detail table tr td {
+  padding: 3px 10px;
+}
+body main #systemReq #systemReq-detail table tr td:first-child {
+  border-right: solid 2px black;
+}
+body main #support {
+  -webkit-clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 100px, 100% 0, 100% 100%, 0 100%);
+  margin-top: -100px;
+  background-image: url(https://pocopota.github.io/icon/square.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 140px;
+}/*# sourceMappingURL=vclinux.css.map */

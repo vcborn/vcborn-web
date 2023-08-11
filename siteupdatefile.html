@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="/images/favicon.ico" sizes="16x16" type="image/ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>VCbornサイト更新準備</title>
+</head>
+<style>
+  @media screen and (max-width: 959px){
+    body {
+      background-image: url(images/beta1.jpg);
+    }
+  }
+  body {
+    margin: 0;
+    background-image: url(images/beta.png);
+    background-size: cover;
+  }
+
+  #CDT {
+    width: 100%;
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  #CDT01 {
+    width: 100%;
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  .ttl {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .timer {
+    /* background: #d00000; */
+    margin: 5px auto;
+    padding: 5px;
+    text-align: center;
+    font-size:30px;
+    color:#fff;
+  }
+</style>
+
+<body>
+
+  <section class="timer">
+   <h4> サイト更新まで残り</h4>
+    <div id="CDT"></div>
+  </section>
+
+  <script>
+    function CountdownTimer(elm, tl, mes) {
+      this.initialize.apply(this, arguments);
+    }
+    CountdownTimer.prototype = {
+      initialize: function (elm, tl, mes) {
+        this.elem = document.getElementById(elm);
+        this.tl = tl;
+        this.mes = mes;
+      }, countDown: function () {
+        var timer = '';
+        var today = new Date();
+        var day = Math.floor((this.tl - today) / (24 * 60 * 60 * 1000));
+        var hour = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+        var min = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / (60 * 1000)) % 60;
+        var sec = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / 1000) % 60 % 60;
+        var milli = Math.floor(((this.tl - today) % (24 * 60 * 60 * 1000)) / 10) % 100;
+        var me = this;
+
+        if ((this.tl - today) > 0) {
+          if (day)
+            timer += '' + day + '日';
+          if (hour)
+            timer += '' + hour + '時間';
+          timer += '' + this.addZero(min) + '分' +
+            this.addZero(sec) + '秒';
+          this.elem.innerHTML = timer;
+          tid = setTimeout(function () {
+            me.countDown();
+          }, 10);
+        } else {
+          this.elem.innerHTML = this.mes;
+          return;
+        }
+      }, addZero: function (num) {
+        return ('0' + num).slice(-2);
+      }
+    }
+    function CDT() {
+      var tl = new Date('2021/8/23 14:00:00');// ここで日付を指定
+      var timer = new CountdownTimer('CDT', tl, 'サイト更新までしばらくお待ちください。(手動更新のため誤差があります)');
+      timer.countDown();
+    }
+
+
+    function CDT01() {
+      var tl = new Date('2021/8/23 14:00:00');// ここで日付を指定
+      var timer = new CountdownTimer('CDT01', tl, 'サイト更新までしばらくお待ちください。(手動更新のため誤差があります)');
+      timer.countDown();
+    }
+    window.onload = function () {
+      CDT();
+      CDT01();
+    }
+  </script>
+</body>
+
+</html>

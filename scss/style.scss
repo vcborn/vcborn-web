@@ -1,0 +1,1447 @@
+// 色変数
+$base-white: #fdfdfd;
+$base-blue: #edf2f7;
+$main-color: #163469;
+$accent-color: #1b1b1b;
+$gray-color: #a9a9a9;
+$red-color: #ff1a1a;
+$black-color: #14171a;
+$light-black: #4d4d4d;
+
+//全ページ共通部分
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+section,
+a,
+button,
+textarea,
+ins,
+select,
+summary,
+cite,
+input {
+  font-family: "Noto Sans JP", sans-serif;
+  color: $black-color;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+i ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #f5f5f5;
+}
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: $gray-color;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  header {
+    width: 100%;
+    height: 70px;
+    background-color: $main-color;
+    #header-inner {
+      width: 1000px;
+      height: 70px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      h1 {
+        height: 70px;
+        width: auto;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        img {
+          pointer-events: none;
+          height: 28px;
+          width: auto;
+          vertical-align: baseline;
+        }
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        li {
+          list-style: none;
+          font-size: 17px;
+          margin: 0 10px;
+          a {
+            color: $base-white;
+            text-decoration: none;
+            transition-duration: 200ms;
+          }
+          :hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    width: 100%;
+    background-color: $main-color;
+    overflow: hidden;
+    #footer-inner {
+      width: 1000px;
+      margin: 40px auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      #footer-top {
+        width: 250px;
+        margin-top: -10px;
+        img {
+          height: auto;
+          width: 250px;
+          margin: 20px auto;
+        }
+        #footer-sns {
+          text-align: center;
+          img {
+            width: 35px;
+            height: 35px;
+            margin: auto 5px;
+            transition-duration: 200ms;
+          }
+          img:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+      #footer-nav {
+        display: flex;
+        flex-direction: row;
+        ul {
+          padding: 0;
+          margin: 0 25px;
+          li:first-child {
+            font-size: 17px;
+          }
+          li {
+            list-style: none;
+            color: $gray-color;
+            margin: 5px auto;
+            font-size: 16px;
+            a:hover {
+              opacity: 0.5;
+            }
+            a {
+              color: $base-white;
+              text-decoration: none;
+              transition-duration: 200ms;
+            }
+          }
+        }
+      }
+    }
+    #footer-last {
+      background-color: $accent-color;
+      overflow: hidden;
+      ul {
+        padding: 1px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 1000px;
+        margin: 7px auto;
+        li {
+          list-style: none;
+          color: $base-white;
+          font-size: 15px;
+          margin: 0 30px;
+          a:hover {
+            text-decoration-color: $base-white;
+            -webkit-text-decoration-color: $base-white;
+            -moz-text-decoration-color: $base-white;
+          }
+          a {
+            color: $base-white;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            -webkit-text-decoration-color: transparent;
+            -moz-text-decoration-color: transparent;
+            transition-duration: 200ms;
+          }
+        }
+      }
+    }
+  }
+}
+
+// トップページ
+.swiper {
+  width: 100%;
+  height: auto;
+  .swiper-slide {
+    width: 100%;
+    height: auto;
+    .w-span {
+      display: inline-flex;
+      align-items: end;
+      span {
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
+      }
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    img.background {
+      height: 60vh;
+      object-fit: cover;
+      pointer-events: none;
+    }
+    img.logo {
+      max-width: 250px;
+    }
+
+    div.contents {
+      padding-left: 2rem;
+      position: absolute;
+      top: 50%;
+      left: 33.33333%;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+
+      a.button {
+        display: inline-block;
+        font-size: 16px;
+        padding: 0.5rem 1rem;
+        border: none;
+        color: #fdfdfd;
+        margin: 5px auto;
+        -webkit-transition-duration: 200ms;
+        transition-duration: 200ms;
+        text-decoration: none;
+
+        &.black {
+          background-color: black;
+        }
+
+        &.blue {
+          background-color: #163469;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    &.bg-blue {
+      background-color: #163469;
+    }
+
+    div.contents p {
+      font-size: 1.25rem;
+
+      &.white {
+        color: white;
+      }
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    --swiper-navigation-color: black;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: black;
+  }
+}
+
+#top {
+  h2 {
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 1em;
+    color: $main-color;
+    margin: 15px auto;
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: 700;
+  }
+  h2:before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    display: inline-block;
+    width: 60px;
+    height: 2px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: $main-color;
+  }
+  .inner {
+    max-width: 1000px;
+    margin: 80px auto;
+  }
+  #about {
+    background-color: $base-white;
+    overflow: hidden;
+    #about-inner {
+      p {
+        text-align: center;
+        color: $black-color;
+        font-size: 16px;
+        margin-top: 30px;
+      }
+    }
+  }
+  #services {
+    background-color: $base-blue;
+    overflow: hidden;
+    #services-inner {
+      margin-bottom: 160px;
+      #products {
+        margin-top: 60px;
+        .one-product {
+          position: relative;
+          margin: auto;
+          width: 900px;
+          margin-bottom: 110px;
+          .product-img {
+            overflow: hidden;
+            width: 650px;
+            height: 365px;
+          }
+          img:hover {
+            transform: scale(1.05, 1.05);
+          }
+          img {
+            width: 650px;
+            height: 365px;
+            transition-duration: 200ms;
+            object-fit: cover;
+            object-position: left top;
+          }
+          .product-info {
+            background-color: $main-color;
+            width: 400px;
+            position: absolute;
+            overflow: hidden;
+            top: 190px;
+            right: 0;
+            h3,
+            p,
+            a {
+              color: $base-white;
+              text-decoration: none;
+            }
+            h3 {
+              font-size: 33px;
+              margin: 20px;
+              margin-left: 35px;
+            }
+            p {
+              font-size: 15px;
+              margin-left: 35px;
+              margin-right: 20px;
+            }
+            .product-btn {
+              margin-left: 35px;
+              margin-bottom: 20px;
+              p {
+                margin-left: 0;
+              }
+              a:first-child {
+                margin-left: 0;
+              }
+              a:hover {
+                opacity: 0.7;
+              }
+              a {
+                display: inline-block;
+                transition-duration: 200ms;
+                background-color: $accent-color;
+                border: none;
+                padding: 7.5px 20px;
+                font-size: 1rem;
+                margin: 0.25rem 5px;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #news {
+    background-color: $base-white;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-left: 20px;
+    #news-inner {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      #news-flex {
+        text-align: left;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 3rem;
+        justify-content: space-around;
+        margin-top: 40px;
+        .one-news:hover {
+          opacity: 0.8;
+        }
+        .one-news {
+          transition-duration: 200ms;
+          margin-bottom: 35px;
+          overflow: hidden;
+          a {
+            text-decoration: none;
+          }
+          .news-samune {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: $main-color;
+          }
+        }
+        .news-info {
+          background-color: $base-blue;
+          .date {
+            background-color: $main-color;
+            font-size: 14px;
+            padding: 4px;
+            color: $base-white;
+            width: calc(266px / 2);
+            padding-left: 8px;
+          }
+          h3 {
+            font-size: 16px;
+            padding: 7px;
+            margin: 0;
+          }
+        }
+      }
+      .button {
+        font-size: 16px;
+        padding: 0.5rem 1rem;
+        border: none;
+        background-color: $main-color;
+        color: $base-white;
+        display: inline-block;
+        margin: 5px auto;
+        transition-duration: 200ms;
+        text-decoration: none;
+      }
+      .button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+  }
+  #join {
+    background-color: $base-blue;
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    p {
+      font-size: 16px;
+      text-align: center;
+    }
+    a {
+      font-size: 16px;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: $main-color;
+      color: $base-white;
+      display: block;
+      margin: 5px auto;
+      transition-duration: 200ms;
+      text-decoration: none;
+    }
+    a:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+  #advertise {
+    background-color: $base-white;
+    overflow: hidden;
+    text-align: center;
+    ins {
+      width: 100%;
+    }
+  }
+}
+
+// 子ページ（ニュースやクリエイター一覧ページ等）の共通
+#h2-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  #particles-js {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background-color: $main-color;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  h2 {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    color: $base-white;
+    position: absolute;
+    span:first-child {
+      font-size: 38px;
+      position: relative;
+      margin-bottom: 1em;
+      margin: 15px auto;
+      margin-top: 0;
+      letter-spacing: 3px;
+    }
+    span:first-child:before {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      display: inline-block;
+      width: 60px;
+      height: 2px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-color: $base-white;
+    }
+    span:last-child {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}
+
+// ニュース一覧
+#news {
+  #news-list {
+    width: 1000px;
+    margin: 60px auto;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3rem;
+    .one-news:hover {
+      opacity: 0.8;
+    }
+    .one-news {
+      margin-bottom: 35px;
+      overflow: hidden;
+      transition-duration: 200ms;
+      a {
+        text-decoration: none;
+      }
+      .news-samune {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+      }
+      .news-info {
+        background-color: $base-blue;
+        height: 100%;
+        .date {
+          background-color: $main-color;
+          font-size: 14px;
+          padding: 4px;
+          color: $base-white;
+          width: calc(266px / 2);
+          padding-left: 8px;
+        }
+        h3 {
+          font-size: 16px;
+          padding: 7px;
+          margin: 0;
+          color: $black-color;
+        }
+      }
+    }
+  }
+}
+
+// 所属クリエイター一覧ページ
+#creators {
+  background-color: $base-blue;
+  #creators-list {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .one-creator {
+      display: flex;
+      flex-direction: row;
+      margin: 20px auto;
+      .left-info {
+        background-color: $main-color;
+        width: 40%;
+        max-width: 160px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        .involve-project {
+          ul {
+            margin: 7px;
+            padding: 0;
+            li {
+              list-style: none;
+              color: $base-white;
+            }
+            li:first-child {
+              font-size: 16px;
+            }
+            li:nth-child(n + 2) {
+              background-color: $accent-color;
+              display: inline-block;
+              padding: 0 4px;
+              margin: 1px auto;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .right-info {
+        width: 320px;
+        background-color: $base-white;
+        h3 {
+          overflow-wrap: break-word;
+          margin: 9px 16px;
+          margin-top: 20px;
+          font-size: 28px;
+          color: $black-color;
+        }
+        p {
+          margin: 0 16px;
+          color: $black-color;
+        }
+        h4 {
+          margin: 10px 16px;
+          color: $black-color;
+        }
+        ul {
+          padding: 0;
+          margin: 0;
+          margin: 3px 16px;
+          li:nth-child(odd) {
+            float: left;
+          }
+          li:nth-child(even) {
+            float: right;
+          }
+          li {
+            list-style: none;
+            width: 133px;
+            margin: 4px auto;
+            padding: 2px;
+            font-size: 16px;
+            border-left: solid 2px $black-color;
+            border-bottom: solid 2px $black-color;
+            position: relative;
+            line-height: 1.1em;
+            text-indent: 1.1em;
+            a:hover {
+              text-decoration-color: $black-color;
+              -webkit-text-decoration-color: $black-color;
+              -moz-text-decoration-color: $black-color;
+            }
+            a {
+              display: block;
+              padding-left: 3px;
+              overflow-wrap: break-word;
+              text-decoration: underline;
+              text-decoration-color: transparent;
+              -moz-text-decoration-color: transparent;
+              color: $black-color;
+              transition-duration: 200ms;
+            }
+          }
+          .twitter:before {
+            content: "";
+            display: inline-block;
+            width: 1.1em;
+            height: 1.1em;
+            background: url(/images/svg/twitter-icon.svg) no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: 2px;
+          }
+          .github:before {
+            content: "";
+            display: inline-block;
+            width: 1.1em;
+            height: 1.1em;
+            background: url(/images/svg/github-icon.svg) no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: 2px;
+          }
+          .youtube:before {
+            content: "";
+            display: inline-block;
+            width: 1.1em;
+            height: 1.1em;
+            background: url(/images/svg/youtube-icon.svg) no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: 2px;
+            margin-right: 4px;
+          }
+          .homepage:before {
+            content: "";
+            display: inline-block;
+            width: 1.1em;
+            height: 1.1em;
+            background: url(/images/svg/browser-icon.svg) no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: 2px;
+            margin-right: 4px;
+          }
+          .discord:before {
+            content: "";
+            display: inline-block;
+            width: 1.1em;
+            height: 1.1em;
+            background: url(/images/svg/discord-icon.svg) no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: 2px;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//articleページ
+#article {
+  background-color: $base-blue;
+  article {
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    background-color: $base-white;
+    overflow: hidden;
+    .table-of-contents {
+      width: 80%;
+      padding: 25px 50px;
+      margin: 10px auto;
+      border-top: solid 5px $main-color;
+      background-color: $base-blue;
+      color: $main-color;
+      a:hover {
+        opacity: 0.6;
+      }
+      a {
+        transition-duration: 200ms;
+        color: $black-color;
+      }
+    }
+    h3 {
+      color: $black-color;
+      border-bottom: $main-color solid 3px;
+      font-size: 25px;
+      margin: 23px auto;
+    }
+    h4 {
+      color: $black-color;
+      border-left: $main-color solid 3px;
+      font-size: 19px;
+      padding-left: 5px;
+    }
+    h5 {
+      font-size: 18px;
+      color: $black-color;
+      position: relative;
+      padding-left: 1em;
+      line-height: 1;
+    }
+    h5:before {
+      font-family: "Font Awesome 5 Free";
+      content: "\f111";
+      font-weight: 900;
+      position: absolute;
+      font-size: 0.8em;
+      left: 0;
+      top: 0.1em;
+      color: $main-color;
+    }
+    p {
+      color: $black-color;
+    }
+    a {
+      color: $main-color;
+    }
+  }
+}
+
+//お問い合わせページ
+#contact {
+  overflow: hidden;
+  background-color: $base-white;
+  #contact-form {
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    h3 {
+      font-size: 25px;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+    fieldset {
+      display: inline-block;
+    }
+    div:not(.agreement, .error) {
+      padding: 10px;
+      border-top: solid $gray-color 1px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    label {
+      text-align: right;
+      margin-right: 30px;
+      display: block;
+      width: 240px;
+      float: left;
+      span {
+        background-color: $red-color;
+        color: $base-white;
+        font-size: 13px;
+        padding: 1px 3px;
+        margin-left: 10px;
+        white-space: nowrap;
+      }
+    }
+    input[type="text"]:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      border-color: $main-color;
+    }
+    input[type="text"] {
+      background-color: $base-blue;
+      border: solid 1px $gray-color;
+      width: 400px;
+      height: 35px;
+      padding-left: 10px;
+      transition-duration: 200ms;
+    }
+    select {
+      width: 415px;
+      height: 35px;
+      border: solid 1px $gray-color;
+      background-color: $base-blue;
+      padding-left: 10px;
+      transition-duration: 200ms;
+    }
+    textarea {
+      resize: vertical;
+      background-color: $base-blue;
+      border: solid 1px $gray-color;
+      width: 400px;
+      height: 150px;
+      padding-left: 10px;
+      padding-top: 7.5px;
+      transition-duration: 200ms;
+    }
+    .error {
+      color: $red-color;
+      font-size: 15px;
+      padding: 3px;
+      margin-left: 270px;
+      border: none;
+    }
+    button {
+      font-size: 16px;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: $main-color;
+      color: $base-white;
+      margin: 30px auto;
+      display: block;
+      text-align: center;
+      transition-duration: 200ms;
+    }
+    button:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    .agreement {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      label {
+        width: auto;
+      }
+      input[type="checkbox"] {
+        margin: 6px;
+      }
+    }
+  }
+}
+
+//お問い合わせ内容確認ページ
+#contents-check {
+  background-color: $base-white;
+  overflow: hidden;
+  form {
+    width: 800px;
+    margin: 0 auto;
+    h3 {
+      text-align: center;
+      font-size: 25px;
+    }
+    .first-p {
+      text-align: center;
+    }
+    .contents-check-inner {
+      background-color: $base-blue;
+      border: 1px solid $gray-color;
+      border-radius: 4px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 10px;
+      div {
+        label {
+          text-align: right;
+          float: left;
+          width: 240px;
+          font-weight: 600;
+          margin-right: 40px;
+        }
+        p {
+          overflow: hidden;
+        }
+        ul {
+          overflow: hidden;
+          padding: 0;
+          li {
+            list-style: none;
+          }
+        }
+      }
+    }
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      button,
+      input[type="button"] {
+        font-size: 16px;
+        padding: 0.5rem 1rem;
+        border: none;
+        background-color: $main-color;
+        color: $base-white;
+        margin: 20px;
+        display: block;
+        text-align: center;
+        transition-duration: 200ms;
+      }
+      button:hover,
+      input[type="button"]:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//お問い合わせthanksページ
+#contact-thanks {
+  background-color: $base-white;
+  .contact-thanks-inner {
+    background-color: $base-blue;
+    overflow: hidden;
+    width: 500px;
+    margin: 100px auto;
+    border-radius: 5px;
+    h3,
+    p {
+      text-align: center;
+    }
+    h3 {
+      font-size: 25px;
+    }
+    button {
+      font-size: 16px;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: $main-color;
+      color: $base-white;
+      margin: 20px;
+      display: block;
+      margin: 20px auto;
+      transition-duration: 200ms;
+      a {
+        color: $base-white;
+        display: block;
+        text-decoration: none;
+      }
+    }
+    button:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+}
+
+// 参加用フォーム用scss
+#join {
+  overflow: hidden;
+  background-color: $base-white;
+  #join-form {
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    h3 {
+      font-size: 25px;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+    fieldset {
+      display: inline-block;
+    }
+    .agreement {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      label {
+        width: auto;
+      }
+      input[type="checkbox"] {
+        margin: 6px;
+      }
+    }
+    .joinsan {
+      padding: 10px;
+      border-top: solid $gray-color 1px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    label {
+      text-align: right;
+      margin-right: 30px;
+      display: block;
+      width: 240px;
+      float: left;
+      span {
+        background-color: $red-color;
+        color: $base-white;
+        font-size: 13px;
+        padding: 1px 3px;
+        margin-left: 10px;
+        white-space: nowrap;
+      }
+    }
+    input[type="text"]:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      border-color: $main-color;
+    }
+    input[type="text"] {
+      background-color: $base-blue;
+      border: solid 1px $gray-color;
+      width: 400px;
+      height: 35px;
+      padding-left: 10px;
+      transition-duration: 200ms;
+    }
+    select {
+      width: 415px;
+      height: 35px;
+      border: solid 1px $gray-color;
+      background-color: $base-blue;
+      padding-left: 10px;
+      transition-duration: 200ms;
+    }
+    textarea {
+      resize: vertical;
+      background-color: $base-blue;
+      border: solid 1px $gray-color;
+      width: 400px;
+      height: 150px;
+      padding-top: 7.5px;
+      padding-left: 10px;
+      transition-duration: 200ms;
+    }
+    .error {
+      color: $red-color;
+      font-size: 15px;
+      padding: 3px;
+      margin-left: 270px;
+    }
+    .go-check {
+      display: block;
+      text-align: center;
+      width: 80px;
+      font-size: 16px;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: $main-color;
+      color: $base-white;
+      margin: 30px auto;
+      text-decoration: none;
+      transition-duration: 200ms;
+    }
+    .go-check:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    .check,
+    .check1 {
+      display: flex;
+      align-items: center;
+      padding-left: 11%;
+      padding: 0;
+      label {
+        margin-right: 0;
+        text-align: left;
+      }
+    }
+    .checktext {
+      padding-right: 100%;
+      border-top: solid $gray-color 2px;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+#hero {
+  height: 80vh;
+
+  picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  .contents {
+    img {
+      pointer-events: none;
+      max-height: 3rem;
+    }
+
+    p {
+      display: block;
+      font-size: 1.3rem;
+    }
+
+    a {
+      display: inline-block;
+      background-color: #163469;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      transition-duration: 200ms;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .contents.left {
+    padding-left: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 33.33333%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .contents.center {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+// 製品用
+#product {
+  section {
+    .contents {
+      text-align: center;
+      max-width: 72rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 2rem;
+    }
+    padding: 2rem;
+    font-size: 1.125rem;
+    min-height: 15rem;
+    h2 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    h3 {
+      margin: 0;
+      padding-bottom: 1.5rem;
+    }
+    ul {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+  .button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    background-color: #163469;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition-duration: 200ms;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  #features .split {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    .feature {
+      padding: 1.25rem;
+      background-color: white;
+      transition-duration: 200ms;
+      &:hover {
+        transform: translateY(-0.25rem);
+        box-shadow: 0 0 #0000, 0 0 #0000, 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+      i {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 3rem;
+      }
+      h3 {
+        padding: 0;
+      }
+    }
+  }
+  #requirements table {
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-left: auto;
+    margin-right: auto;
+    td {
+      &:first-child {
+        border-right: solid 1px black;
+      }
+      padding: 0.5rem;
+    }
+  }
+  .blue {
+    background-color: #edf2f7;
+  }
+  #about p {
+    line-height: 2rem;
+  }
+  .disabled {
+    color: white;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+    pointer-events: none;
+  }
+  .version select {
+    cursor: pointer;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    border-radius: 0;
+    transition-duration: 200ms;
+    -webkit-appearance: none;
+    background-image: linear-gradient(
+        45deg,
+        transparent 50%,
+        rgba(0, 0, 0, 0.4) 50%
+      ),
+      linear-gradient(135deg, rgba(0, 0, 0, 0.4) 50%, transparent 50%);
+    background-size: 5px 5px, 5px 5px;
+    background-position: calc(100% - 15px) 50%, calc(100% - 10px) 50%;
+    background-repeat: no-repeat;
+    &:hover {
+      border-color: #163469;
+    }
+    &:focus {
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+    }
+  }
+  .agreement {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// 製品（コラム形式）用
+#product-col {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+
+  div {
+    &.col-span-1 {
+      grid-column: span 1 / span 1;
+    }
+
+    &.col-span-2 {
+      grid-column: span 2 / span 2;
+    }
+
+    &.col-span-3 {
+      grid-column: span 3 / span 3;
+    }
+
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #222;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: white;
+    padding-bottom: 2rem;
+
+    h2,
+    p,
+    cite,
+    cite a {
+      color: white;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .compare {
+      padding: 0;
+
+      p {
+        text-align: left;
+      }
+
+      .bar {
+        padding: 0;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        border-radius: 9999px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        &.edge {
+          background-color: #0078d7;
+        }
+
+        &.firefox {
+          background-color: #e66000;
+          width: 60%;
+        }
+
+        &.monot {
+          background-color: #8a8a8a;
+          width: 20%;
+        }
+      }
+    }
+  }
+
+  a.dlbutton {
+    margin-bottom: 2rem;
+    display: inline-block;
+    background-color: #a0a0a0;
+    border-radius: 9999px;
+    text-decoration: none;
+    padding: 0.8rem 1.6rem;
+    color: black;
+    transition-duration: 200ms;
+
+    &:hover {
+      background-color: #d1d1d1;
+    }
+  }
+
+  div blockquote {
+    background-color: #292929;
+    border-radius: 0.5rem;
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+// 404 NotFoundページ
+#NotFound {
+  background-color: $base-white;
+  position: relative;
+  #particles-js {
+    background-color: $main-color;
+    height: calc(100vh - 70px - 237px);
+  }
+  #notfound-inner {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    h3,
+    p {
+      text-align: center;
+    }
+    h3 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 15px;
+    }
+    .fa-home {
+      text-align: center;
+      color: #fff;
+    }
+  }
+}

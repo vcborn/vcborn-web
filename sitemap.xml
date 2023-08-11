@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
+<url>
+  <loc>https://vcborn.com/</loc>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>https://vcborn.com/services/vclinux/</loc>
+  <priority>0.8</priority>
+  <lastmod>2021-11-10T00:35:53+09:00</lastmod>
+</url>
+<url>
+  <loc>https://vcborn.com/services/reamix/</loc>
+  <priority>0.8</priority>
+  <lastmod>2021-11-10T00:04:42+09:00</lastmod>
+</url>
+<url>
+  <loc>https://vcborn.com/article/opened-blog.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2021-11-14T18:28:14+09:00</lastmod>
+</url>
+<url>
+  <loc>https://vcborn.com/article/aquahall-bye.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2021-11-14T18:28:13+09:00</lastmod>
+</url>
+<url>
+  <loc>https://vcborn.com/article/miskkeyhenkou.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2021-11-14T18:28:13+09:00</lastmod>
+</url>
+<url>
+  <loc>https://vcborn.com/news.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2021-11-14T18:28:13+09:00</lastmod>
+</url>
+<url>
+  <loc>https://vcborn.com/join/</loc>
+  <priority>0.8</priority>
+  <lastmod>2021-11-10T00:04:41+09:00</lastmod>
+</url>
+<url>
+  <loc>https://vcborn.com/tos.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2021-11-10T00:30:46+09:00</lastmod>
+</url>
+<url>
+  <loc>https://vcborn.com/support/vclinux/how-to-install.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2021-11-10T00:35:45+09:00</lastmod>
+</url>
+<url>
+  <loc>https://vcborn.com/contact/</loc>
+  <priority>0.7</priority>
+  <lastmod>2021-11-10T16:29:30+09:00</lastmod>
+</url>
+<url>
+  <loc>https://vcborn.com/article/twittershadoban.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2021-11-14T18:28:14+09:00</lastmod>
+</url>
+<url>
+  <loc>https://vcborn.com/article/website-release.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2021-11-14T18:28:14+09:00</lastmod>
+</url>
+<url>
+  <loc>https://vcborn.com/privacypolicy.html</loc>
+  <priority>0.6</priority>
+  <lastmod>2021-11-10T00:04:39+09:00</lastmod>
+</url>
+<url>
+  <loc>https://vcborn.com/article/contact.html</loc>
+  <priority>0.6</priority>
+  <lastmod>2021-11-10T00:04:39+09:00</lastmod>
+</url>
+
+</urlset>

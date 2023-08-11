@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head id="head">
+    <!-- ページの内容 -->
+    <title>お問い合わせ | VCborn</title>
+    <meta name="description" content="VCborn公式サイト" />
+
+    <!-- OGPタグ用 -->
+    <meta property="og:url" content="https://vcborn.com/contact/" />
+    <meta property="og:title" content="お問い合わせ | VCborn" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="VCborn公式サイト" />
+    <meta property="og:image" content="https://vcborn.com/images/jpg/ogp.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@vcborn_support" />
+    <meta property="og:site_name" content="VCborn" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta charset="utf-8" />
+    <!-- お問い合わせ用js読み込み -->
+    <script type="text/javascript" src="/contact/contact.js"></script>
+
+    <!-- GooogleAdsense -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1336300432888389"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- GoogleAnalytics-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8GC99E31DE"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8GC99E31DE");
+    </script>
+  </head>
+
+  <body>
+    <header id="header"></header>
+    <main id="contact">
+      <section id="h2-title">
+        <div id="particles-js"></div>
+        <h2>
+          <span>CONTACT</span>
+          <span>お問い合わせ</span>
+        </h2>
+      </section>
+      <section id="contact-form">
+        <form
+          action="/contact/confirm"
+          method="post"
+          name="form"
+          onsubmit="return validate()"
+        >
+          <h3 class="contact-title">お問い合わせ 内容入力</h3>
+          <p>
+            お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。
+          </p>
+          <div>
+            <label>
+              お名前
+              <span>必須</span>
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="例）山田太郎(ハンドルネーム可)"
+              value=""
+              required
+            />
+          </div>
+          <div>
+            <label>
+              ふりがな
+              <span>必須</span>
+            </label>
+            <input
+              type="text"
+              name="furigana"
+              placeholder="例）やまだたろう(ハンドルネーム可)"
+              value=""
+              required
+            />
+          </div>
+          <div>
+            <label>
+              メールアドレス
+              <span>必須</span>
+            </label>
+            <input
+              type="text"
+              name="email"
+              placeholder="例）guest@example.com"
+              value=""
+              required
+            />
+          </div>
+          <div>
+            <label>
+              お問い合わせ項目
+              <span>必須</span>
+            </label>
+            <select name="item" required>
+              <option value="">お問い合わせ項目を選択してください</option>
+              <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
+              <option value="ご意見・ご感想">ご意見・ご感想</option>
+              <option value="VCborn Wikiの申請">VCborn Wikiの申請</option>
+            </select>
+          </div>
+          <div>
+            <label>
+              お問い合わせ内容
+              <span>必須</span>
+            </label>
+            <textarea
+              name="content"
+              rows="5"
+              placeholder="お問合せ内容を入力"
+              required
+            ></textarea>
+          </div>
+          <div class="agreement">
+            <input
+              type="checkbox"
+              id="agree"
+              name="agree_privacy"
+              autocomplete="off"
+              required
+            />
+            <label for="agree">
+              <a href="/privacypolicy">プライバシーポリシー</a>
+              をよく読み、同意しました。
+            </label>
+          </div>
+          <button onclick="validate();">確認画面へ</button>
+        </form>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+
+    <!-- リンク読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.33.3/tsparticles.slim.min.js"></script>
+    <!-- particles.js -->
+    <script src="/js/script.js"></script>
+    <script src="/include.js"></script>
+    <!-- 共通化用 -->
+  </body>
+</html>

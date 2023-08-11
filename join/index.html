@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head id="head">
+  <!-- ページの内容 -->
+  <title>参加する | VCborn</title>
+  <meta name="description" content="VCborn公式サイト" />
+
+  <!-- OGPタグ用 -->
+  <meta property="og:url" content="https://vcborn.com/join/" />
+  <meta property="og:title" content="参加する | VCborn" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="VCborn公式サイト" />
+  <meta property="og:image" content="https://vcborn.com/images/jpg/ogp.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@vcborn_support" />
+  <meta property="og:site_name" content="VCborn" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta charset="utf-8" />
+  <!-- お問い合わせ用js読み込み -->
+  <script type="text/javascript" src="/join/contact.js"></script>
+  <!-- SweetAlert -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+  <!-- GooogleAdsense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1336300432888389"
+    crossorigin="anonymous"></script>
+
+  <!-- GoogleAnalytics-->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8GC99E31DE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-8GC99E31DE");
+  </script>
+</head>
+
+<body>
+  <header id="header"></header>
+  <main id="join">
+    <section id="h2-title">
+      <div id="particles-js"></div>
+      <h2>
+        <span>JOIN US</span>
+        <span>参加する</span>
+      </h2>
+    </section>
+    <section id="join-form">
+      <form action="/join/confirm" method="post" name="form" onsubmit="return validate()">
+        <h3 class="join-title">参加情報 内容入力</h3>
+        <p>
+          参加情報をご入力の上、「確認画面へ」ボタンをクリックしてください。
+        </p>
+        <div class="joinsan">
+          <label>
+            お名前
+            <span>必須</span>
+          </label>
+          <input type="text" name="name" placeholder="例）山田太郎(ハンドルネーム可)" value="" required />
+        </div>
+        <div class="joinsan">
+          <label>
+            ふりがな
+            <span>必須</span>
+          </label>
+          <input type="text" name="furigana" placeholder="例）やまだたろう(ハンドルネーム可)" value="" required />
+        </div>
+        <div class="joinsan">
+          <label>
+            メールアドレス
+            <span>必須</span>
+          </label>
+          <input type="text" name="email" placeholder="例）guest@example.com" value="" required />
+        </div>
+        <div class="joinsan">
+          <label>
+            TwitterID
+            <span>必須</span>
+          </label>
+          <input type="text" name="twitterid" placeholder="例）@vcborn_support" value="" required />
+        </div>
+        <div class="joinsan">
+          <label>
+            所属中のグループ
+            <span>必須</span>
+          </label>
+          <input type="text" name="group" placeholder="例）Ablaze, TGRGroup または なし" value="" required />
+        </div>
+        <div class="joinsan">
+          <label>
+            平均浮上日数（一週間）
+            <span>必須</span>
+          </label>
+          <select name="active" required>
+            <option value="">日数を選択してください</option>
+            <option value="0日～2日">0日～2日</option>
+            <option value="3日～5日">3日～5日</option>
+            <option value="6日～7日">6日～7日</option>
+          </select>
+        </div>
+        <div class="joinsan">
+          <label>
+            入りたい部署
+            <span>必須</span>
+          </label>
+          <div class="checks">
+            <div class="check">
+              <input type="checkbox" id="checkbox0" name="departments[]" value="Linux開発" />
+              <label for="checkbox0">Linux開発</label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="checkbox1" name="departments[]" value="デザイン" />
+              <label for="checkbox1">デザイン</label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="checkbox2" name="departments[]" value="Web開発" />
+              <label for="checkbox2">Web開発</label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="checkbox3" name="departments[]" value="ブラウザ開発" />
+              <label for="checkbox3">ブラウザ開発</label>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="checkbox4" name="departments[]" value="bot制作" />
+              <label for="checkbox4">BOT制作</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="joinsan">
+          <label>
+            できること(一言)
+            <span>必須</span>
+          </label>
+          <textarea name="content" rows="5" placeholder="お問合せ内容を入力" required></textarea>
+        </div>
+        <div>
+          <div class="agreement">
+            <input type="checkbox" id="agree" name="agree" autocomplete="off" required />
+            <label for="agree">
+              <a href="/privacypolicy">プライバシーポリシー</a>
+              をよく読み、同意しました。
+            </label>
+          </div>
+        </div>
+        <a href="javascript:validate();" class="go-check">確認画面へ</a>
+      </form>
+    </section>
+  </main>
+  <footer id="footer"></footer>
+
+  <!-- リンク読み込み -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.33.3/tsparticles.slim.min.js"></script>
+  <!-- particles.js -->
+  <script src="/js/script.js"></script>
+  <script src="/include.js"></script>
+  <!-- 共通化用 -->
+</body>
+
+</html>
